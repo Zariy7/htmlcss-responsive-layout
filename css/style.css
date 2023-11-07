@@ -8,16 +8,13 @@
     gap: 10px;
 }
 
-html{
-    overflow-y: scroll;
-}
-
 /* UTILITY CLASSES */
 
 .container{
     max-width: 360px;
     margin: 0 auto;
     padding: 0 20px;
+    border-radius: 0;
 }
 
 .display-flex{
@@ -62,9 +59,7 @@ html{
 
 .col{
     width: calc(100% - 20px);
-    height: 15rem;
-    border: 3px solid red;
-    background-color: turquoise;
+    background-color: rgb(122, 171, 204);
     margin: 1rem 0;
 }
 
@@ -81,7 +76,7 @@ li {
 /* HEADER CLASSES */
 
 header {
-    background-color: rgb(62, 62, 214);
+    background-color: rgb(122, 122, 204);
     height: 5rem;
     width: 100%;
     z-index: 1;
@@ -103,6 +98,10 @@ main {
     padding-top: 5rem;
 }
 
+main img{
+    max-width: 100%;
+}
+
 /* FOOTER CLASSES */
 footer div{
     border-radius: 0;
@@ -110,13 +109,66 @@ footer div{
 
 /* RESPONSIVENESS */
 
-@media screen and (min-width: 769px) {
+/* TABLET */
+
+@media screen and (min-width: 961px) {
     .container{
         max-width: 720px;
     }
 
-    .col{
-        width: calc(50% - 20px);
+    #nameless-section > div > .col{
+        width: calc(100% / 3 - 10px);
+    }
+
+    #nameless-section > div > .col:first-of-type{
+        width: calc((100% / 3) * 2 - 10px);
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #nameless-section > div > .col:first-of-type > .content{
+        width: 100%;
+    }
+
+    #nameless-section > div > .col:first-of-type > .image-container{
+        width: 50%;
+    }
+
+    .flex-direction{
+        flex-direction: row;
+    }
+
+    #header-menu{
+        display: flex;
+    }
+    
+    #menu-logo{
+        display: none;
+    }
+}
+
+/* DESKTOP */
+
+@media screen and (min-width: 1281px) {
+    .container{
+        max-width: 1120px;
+    }
+
+    #nameless-section > div > .col{
+        width: calc(100% / 3 - 10px);
+    }
+
+    #nameless-section > div > .col:first-of-type{
+        width: calc((100% / 3) * 2 - 10px);
+        display: flex;
+    }
+
+    #nameless-section > div > .col:first-of-type > .content{
+        width: 40%;
+    }
+
+    #nameless-section > div > .col:first-of-type > .image-container{
+        width: 50%;
     }
 
     .flex-direction{
