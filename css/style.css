@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     border-radius: 0.5rem;
+    gap: 10px;
 }
 
 html{
@@ -43,8 +44,24 @@ html{
     flex-direction: column;
 }
 
+.flex-wrap{
+    flex-wrap: wrap;
+}
+
+.bg-violet{
+    background-color: rgb(190, 73, 190);
+}
+
+.bg-dark{
+    background-color: rgb(23, 24, 41)
+}
+
+.text-center{
+    text-align: center;
+}
+
 .col{
-    width: 100%;
+    width: calc(100% - 20px);
     height: 15rem;
     border: 3px solid red;
     background-color: turquoise;
@@ -86,9 +103,26 @@ main {
     padding-top: 5rem;
 }
 
+/* FOOTER CLASSES */
+footer div{
+    border-radius: 0;
+}
+
 /* RESPONSIVENESS */
 
 @media screen and (min-width: 769px) {
+    .container{
+        max-width: 720px;
+    }
+
+    .col{
+        width: calc(50% - 20px);
+    }
+
+    .flex-direction{
+        flex-direction: row;
+    }
+
     #header-menu{
         display: flex;
     }
