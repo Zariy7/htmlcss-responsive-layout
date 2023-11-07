@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border-radius: 0.5rem;
     gap: 10px;
 }
 
@@ -14,7 +13,6 @@
     max-width: 360px;
     margin: 0 auto;
     padding: 0 20px;
-    border-radius: 0;
 }
 
 .display-flex{
@@ -46,15 +44,23 @@
 }
 
 .bg-violet{
-    background-color: rgb(190, 73, 190);
+    background-color: rgb(151,146,228);
 }
 
 .bg-dark{
-    background-color: rgb(23, 24, 41)
+    background-color: rgb(23, 24, 41);
+}
+
+.bg-white{
+    background-color: #ffff;
 }
 
 .text-center{
     text-align: center;
+}
+
+.round-border{
+    border-radius: 0.5rem;
 }
 
 .col{
@@ -81,7 +87,6 @@ header {
     width: 100%;
     z-index: 1;
     position: fixed;
-    border-radius: 0;
 }
 
 #header-menu{
@@ -100,6 +105,10 @@ main {
 
 main img{
     max-width: 100%;
+}
+
+.testimonial-images {
+    border-radius: 50%;
 }
 
 /* FOOTER CLASSES */
@@ -145,6 +154,14 @@ footer div{
     #menu-logo{
         display: none;
     }
+
+    #working-benefits > div > .col{
+        width: calc(100% / 2 - 10px);
+    }
+
+    #about-us > div > .col{
+        width: calc(100% / 2 - 10px);
+    }
 }
 
 /* DESKTOP */
@@ -181,5 +198,25 @@ footer div{
     
     #menu-logo{
         display: none;
+    }
+
+    #strategic-planning > div > .col {
+        width: calc(100% / 2 - 10px)
+    }
+
+    #expert-partners > div > .col > .image-container{
+        width: calc(100% / 4 - 10px);
+    }
+
+    #expert-partners > div > .col > .content{
+        width: calc((100% / 4) * 3 - 10px);
+    }
+
+    #working-benefits > div > .col{
+        width: calc(100% / 3 - 10px);
+    }
+
+    #about-us > div > .col{
+        width: calc(100% / 2 - 10px);
     }
 }
